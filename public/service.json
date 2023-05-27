@@ -1,0 +1,56 @@
+[
+    {
+        "name":"ScrewDriver",
+        "img":"https://thumbs.dreamstime.com/b/screwdrivers-black-background-17868942.jpg",
+        "description":"The most common types of screwdrivers include flatheads, Phillips, and Torx. Nut drivers are not as common and are used in mechanical fields. To make the job easier, use electric screwdrivers.",
+        "minimumOrderQuantity":"1000 ",
+        "availableQuantity":"100000 ",
+        "price":"60 "
+
+    },
+    {
+        "name":"Hammer",
+        "img":"https://tse4.mm.bing.net/th?id=OIP.EuHrFFfHeBPwEYw2Bgp47wHaF6&pid=Api&P=0",
+        "description":"Hammers are used for a wide range of driving, shaping, breaking and non-destructive striking applications. Traditional disciplines include carpentry, blacksmithing, warfare, and percussive musicianship (as with a gong ).",
+        "minimumOrderQuantity":"200 ",
+        "availableQuantity":"10000 ",
+        "price":"159 "
+
+    },
+    {
+        "name":"Drill Machine",
+        "img":"https://static.turbosquid.com/Preview/2014/07/05__14_09_27/drill5.jpgd6c93fea-d020-43c8-b334-120526f88a6cOriginal.jpg",
+        "description":"A machine consists of a spindle that provides rotary motion to the drilling tool, which finally makes the hole in the job (workpiece).",
+        "minimumOrderQuantity":"500 ",
+        "availableQuantity":"100000 ",
+        "price":"6000 "
+
+    },
+    {
+        "name":"Wrench",
+        "img":"https://img1.cgtrader.com/items/747707/ebe533bf29/wrench-3d-model-obj-3ds-fbx-blend-ply.png",
+        "description":"Wrenches are used to fasten a joint comprising a nut and bolt. Wrenches are also known as spanners in some parts of the world",
+        "minimumOrderQuantity":"1000 ",
+        "availableQuantity":"300000 ",
+        "price":"60 "
+
+    },
+    {
+        "name":"Paint Brush",
+        "img":"https://thumbs.dreamstime.com/b/screwdrivers-black-background-17868942.jpg",
+        "description":"You can use each type of brushes to create distinctive marks, strokes, lines, and textures. Knowing which paintbrush to pick up will make your life easier as an artist.",
+        "minimumOrderQuantity":"2000",
+        "availableQuantity":"200000 ",
+        "price":"20 "
+
+    },
+    {
+        "name":"Glue Gun",
+        "img":"https://img.freepik.com/premium-photo/hand-detail-with-rotary-tattoo-machine_152904-4688.jpg?w=360",
+        "description":"As for length, this varies depending on the brand of sticks, but it rarely causes compatibility issues with the hot glue gun. Unless you go out of your way to buy very short glue sticks, it is likely that they will work in a standard glue gun.",
+        "minimumOrderQuantity":"600 ",
+        "availableQuantity":"700000 ",
+        "price":"1500 "
+
+    }
+]
