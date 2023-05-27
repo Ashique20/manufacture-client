@@ -10,7 +10,7 @@ const DoneReview =()=>{
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://last-server-five.vercel.app/service/${id}`)
       .then(res => res.json())
       .then(data => setOrder(data))
   }, [id])
@@ -30,7 +30,7 @@ const DoneReview =()=>{
     e.preventDefault()
     const review = e.target.review.value;
   
-    fetch(`http://localhost:5000/review`,{
+    fetch(`https://last-server-five.vercel.app/review`,{
       method:'POST',
       headers:{
         'content-type':'application/json'

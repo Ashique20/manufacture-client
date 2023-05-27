@@ -12,7 +12,7 @@ const [user] = useAuthState(auth)
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://last-server-five.vercel.app/service/${id}`)
       .then(res => res.json())
       .then(data => setOrder(data))
   }, [id])
@@ -22,7 +22,7 @@ const [user] = useAuthState(auth)
     const OrderQuantity = Number(order.OrderQuantity) - 1;
 
 
-    fetch(`http://localhost:5000/service/${id}`, {
+    fetch(`https://last-server-five.vercel.app/service/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'
@@ -42,7 +42,7 @@ const [user] = useAuthState(auth)
   const handleIncrease = e => {
     e.preventDefault();
     const OrderQuantity = (Number(order.OrderQuantity) || Number(order.minimumOrderQuantity)) + Number(e.target.increase.value);
-    fetch(`http://localhost:5000/service/${id}`, {
+    fetch(`https://last-server-five.vercel.app/service/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'
@@ -73,7 +73,7 @@ const [user] = useAuthState(auth)
 
     const handleOrder = event =>{
       event.preventDefault()
-     fetch(`http://localhost:5000/order`,{
+     fetch(`https://last-server-five.vercel.app/order`,{
       method:'POST',
       headers:{
         'content-type':'application/json'

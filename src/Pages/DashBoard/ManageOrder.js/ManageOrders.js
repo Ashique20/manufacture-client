@@ -4,7 +4,7 @@ import Orders from "../Order/Orders";
 const ManageOrders = () => {
     const [orders,setOrders] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/manageOrder`)
+        fetch(`https://last-server-five.vercel.app/manageOrder`)
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[])
@@ -13,7 +13,7 @@ const ManageOrders = () => {
         const sure = window.confirm("Do you want to delete?")
     
         if(sure){
-         fetch(`http://localhost:5000/manageOrder/${id}`,{
+         fetch(`https://last-server-five.vercel.app/manageOrder/${id}`,{
            method:'DELETE',
          })
             .then(res=>res.json())

@@ -12,7 +12,7 @@ const CheckOut = ({order})=>{
     const [clientSecret, setClientSecret] = useState('')
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://last-server-five.vercel.app/create-payment-intent', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
@@ -87,7 +87,7 @@ const CheckOut = ({order})=>{
             transactionId:paymentIntent.id
           }
     
-            fetch(`http://localhost:5000/order/${_id}`, {
+            fetch(`https://last-server-five.vercel.app/order/${_id}`, {
               method: 'PATCH',
               headers: {
                 'content-type': 'application/json'

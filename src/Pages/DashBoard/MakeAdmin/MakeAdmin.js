@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const MakeAdmin =({user,refetch})=>{
     const{email,role} = user;
     const makeAdmin =()=>{
-        fetch(`http://localhost:5000/user/admin/${email}`,{
+        fetch(`https://last-server-five.vercel.app/user/admin/${email}`,{
             method:'PUT',
             headers:{
               'content-type':'application/json'

@@ -11,7 +11,7 @@ const MyProfile = ()=>{
     const [order, setOrder] = useState([])
 
     useEffect(() => {
-      fetch(`http://localhost:5000/profile/${user?.email}`)
+      fetch(`https://last-server-five.vercel.app/profile/${user?.email}`)
         .then(res => res.json())
         .then(data => setOrder(data))
     }, [id])
@@ -20,7 +20,7 @@ const MyProfile = ()=>{
   
     console.log(data)
     const email = user?.email
-    fetch(`http://localhost:5000/profile`,{
+    fetch(`https://last-server-five.vercel.app/profile`,{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -46,7 +46,7 @@ const MyProfile = ()=>{
     //      name,email,education,phone
     // }
     
-    fetch(`http://localhost:5000/profile/${user?.email}`,{
+    fetch(`https://last-server-five.vercel.app/profile/${user?.email}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'

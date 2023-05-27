@@ -4,7 +4,7 @@ import AllReview from "./AllReview";
 const ShowReview=()=>{
     const [reviews,Setreviews] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/review`)
+        fetch(`https://last-server-five.vercel.app/review`)
         .then(res=>res.json())
         .then(data=>Setreviews(data))
     },[])

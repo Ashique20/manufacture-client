@@ -10,7 +10,7 @@ const ManageProduct =()=>{
     const [deletingDoctor,setDeletingDoctor] = useState(null)
     const [services,setService] = useState()
     useEffect(()=>{
-        fetch(`http://localhost:5000/service`)
+        fetch(`https://last-server-five.vercel.app/service`)
         .then(res=>res.json())
         .then(data=>setService(data))
     },[])
@@ -18,7 +18,7 @@ const ManageProduct =()=>{
       
     
    
-         fetch(`http://localhost:5000/service/${id}`,{
+         fetch(`https://last-server-five.vercel.app/service/${id}`,{
            method:'DELETE',
          })
             .then(res=>res.json())

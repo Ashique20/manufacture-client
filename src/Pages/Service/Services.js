@@ -4,7 +4,7 @@ import Service from "./Service";
 import Loading from "../../Shared/Loading/Loading";
 
 const Services =()=>{
-const {data:services,isLoading} = useQuery('services',()=>fetch(`http://localhost:5000/service`).then(res=>res.json()))
+const {data:services,isLoading} = useQuery('services',()=>fetch(`https://last-server-five.vercel.app/service`).then(res=>res.json()))
 if(isLoading){
   return  <Loading></Loading>
 }

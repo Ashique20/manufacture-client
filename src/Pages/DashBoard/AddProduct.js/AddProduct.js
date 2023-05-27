@@ -10,7 +10,7 @@ const AddProduct = () => {
 
     console.log(data)
 
-    fetch(`http://localhost:5000/addProduct`, {
+    fetch(`https://last-server-five.vercel.app/addProduct`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

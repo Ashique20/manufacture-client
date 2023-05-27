@@ -4,7 +4,7 @@ import Loading from "../../../Shared/Loading/Loading";
 import MakeAdmin from "./MakeAdmin";
 
 const Users = ()=>{
-    const {data:users, isLoading,refetch} = useQuery('users',()=>fetch('http://localhost:5000/user',{
+    const {data:users, isLoading,refetch} = useQuery('users',()=>fetch('https://last-server-five.vercel.app/user',{
         method:'GET',
         headers:{
             'content-type':'application/json'
