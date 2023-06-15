@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "assignment11-72007"
-  }
+    "default": "assignment12-a1569",
+    "build": "assignment12-a1569"
+  },
+  "targets": {},
+  "etags": {}
 }

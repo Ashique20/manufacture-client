@@ -22,6 +22,7 @@ const MyProfile = ()=>{
     const email = user?.email
     fetch(`https://last-server-five.vercel.app/profile`,{
         method:'POST',
+        
         headers:{
             'content-type':'application/json'
         },
