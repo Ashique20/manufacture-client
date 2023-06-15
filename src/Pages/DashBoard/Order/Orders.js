@@ -17,7 +17,7 @@ const Orders = () => {
         fetch(`https://last-server-five.vercel.app/order?email=${user?.email}`, {
             method: "GET",
             headers: {
-               'authorization':`Bearer ${localStorage.getItem}`
+                'content-type': 'application/json'
             }
         })
             .then(res => res.json())
