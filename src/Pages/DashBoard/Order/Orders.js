@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import auth from "../../../firebase.init"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useAuthState } from "react-firebase-hooks/auth"
-import { signOut } from "firebase/auth"
 
 
 
@@ -12,24 +11,16 @@ import { signOut } from "firebase/auth"
 const Orders = () => {
     const [orders, setOrder] = useState([])
     const [user] = useAuthState(auth)
-    const navigate = useNavigate()
 
     useEffect(() => {
       if(user){
         fetch(`https://last-server-five.vercel.app/order?email=${user?.email}`, {
             method: "GET",
             headers: {
-                'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+                'content-type': 'application/json'
             }
         })
-            .then(res => {
-              if(res.status === 401 || res.status === 403){
-                navigate('/')
-                signOut(auth)
-                localStorage.removeItem('accessToken')
-              }
-               return res.json()
-              })
+            .then(res => res.json())
             .then(data =>setOrder(data))
       } 
       
