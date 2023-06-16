@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import auth from "../../../firebase.init"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useAuthState } from "react-firebase-hooks/auth"
+import { signOut } from "firebase/auth"
 
 
 
@@ -11,16 +12,24 @@ import { useAuthState } from "react-firebase-hooks/auth"
 const Orders = () => {
     const [orders, setOrder] = useState([])
     const [user] = useAuthState(auth)
+    const navigate = useNavigate()
 
     useEffect(() => {
       if(user){
         fetch(`https://last-server-five.vercel.app/order?email=${user?.email}`, {
             method: "GET",
             headers: {
-                'content-type': 'application/json'
+                'authorization':`Bearer ${localStorage.getItem('accessToken')}`
             }
         })
-            .then(res => res.json())
+            .then(res => {
+              if(res.status === 401 || res.status === 403){
+                navigate('/')
+                signOut(auth)
+                localStorage.removeItem('accessToken')
+              }
+               return res.json()
+              })
             .then(data =>setOrder(data))
       } 
       
@@ -34,7 +43,7 @@ const Orders = () => {
 
 <tbody>
   {
-    orders.map((a,index)=> <tr key={a._id} >
+    orders?.map((a,index)=> <tr key={a._id} >
         <th>{index +1}</th>
         <td><img className="w-96" src={a.img} alt="" /></td>
         <td>{a.name} </td>
