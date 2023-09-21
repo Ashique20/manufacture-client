@@ -31,17 +31,13 @@ const DashBoard =()=>{
             
            
           
-            {admin&&
             
-           <>
             <li ><Link className=" hover:bg-[#0B0C10] w-96 hover:text-white" to='/dashboard/users'>Make Admin  <img className="w-6 ml-6" src="https://www.shareicon.net/data/2016/04/14/492851_admin_256x256.png" alt="" /></Link></li>
             <li ><Link className=" hover:bg-[#0B0C10] w-96 hover:text-white" to='/dashboard/manageOrder'>Manage Orders <img className="w-6 ml-2" src="https://uploads-ssl.webflow.com/5eb17aadc64d8e2a72a99c07/5eb5c1debf5a4930b4087098_icono-4_orders.png" alt="" /></Link></li>
             <li ><Link className=" hover:bg-[#0B0C10] w-96 hover:text-white" to='/dashboard/manageProduct'>Manage Products <img className="w-6 " src="https://cdn1.iconfinder.com/data/icons/zwo-miscellaneous-011/64/settings_setup_manage-512.png" alt="" /></Link></li>
             <li ><Link className=" hover:bg-[#0B0C10] w-96 hover:text-white" to='/dashboard/addProduct'>Add Products  <img className="w-6 ml-8" src="https://icon-library.com/images/add-icon-transparent/add-icon-transparent-19.jpg" alt="" /></Link></li>
            
-           </>
-            
-            }
+          
             
            
           
