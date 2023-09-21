@@ -114,7 +114,7 @@ if(error || gError){
             </form>
             <p><small>New to Tool Manufacturure? <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
             <div className="divider decoration-black">OR</div>
-            <button onClick={() => signInWithGoogle()} className="btn btn-active">Button</button>
+            <button onClick={() => signInWithGoogle()} className="btn btn-active">SignIn With Google</button>
           </div>
 
         </div>
