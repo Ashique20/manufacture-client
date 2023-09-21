@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const DoneReview =()=>{
   const { id } = useParams()
@@ -38,9 +39,13 @@ const DoneReview =()=>{
       body:JSON.stringify({...AddReview,review})
      })
      .then(res=>res.json())
-     .then(data=>{
-      console.log(data)
-     })
+     .then(data => {
+      if (data?.acknowledged
+        === true) {
+          toast.success('Successfully Added a Review')
+      }
+  
+    })
     
 
   }

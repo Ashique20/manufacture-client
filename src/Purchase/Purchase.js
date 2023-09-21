@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { useParams } from "react-router-dom";
 import auth from "../firebase.init";
+import { toast } from "react-toastify";
 
 
 const Purchase = () => {
@@ -33,6 +34,7 @@ const [user] = useAuthState(auth)
         console.log(data)
         console.log(OrderQuantity)
         setOrder({ ...order, OrderQuantity })
+       
       })
 
 
@@ -83,6 +85,10 @@ const [user] = useAuthState(auth)
      .then(res=>res.json())
      .then(data=>{
       console.log(data)
+      if (data?.acknowledged
+        === true) {
+          toast.success('Successfully Purchased a Product')
+      }
      })
     }
 
