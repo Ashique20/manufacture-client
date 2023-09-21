@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const MyProfile = ()=>{
     const { register, handleSubmit } = useForm();
@@ -31,6 +32,7 @@ const MyProfile = ()=>{
     .then(res=>res.json())
     .then(data=>{
         console.log(data)
+       
     })
   };
   
@@ -57,7 +59,12 @@ const MyProfile = ()=>{
     .then(res=>res.json())
     .then(data=>{
       console.log(data)
+      if (data?.acknowledged
+        === true) {
+          toast.success('Successfully Added a Updated. Please RELOAD')
+      }
     })
+    
   }
 
    
